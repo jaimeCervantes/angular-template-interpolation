@@ -1,13 +1,20 @@
 <div>
-        
-  <h2>Variable de input</h2>
-  <div *ngFor="let persona of gente">
-    <p>{{persona.nombre}}</p>
-  </div>
+      
+  <h2>Hola {{nombre}}</h2>
   
-  <h2>Variable de referencia</h2>
-  <input #varReferencia value="Hola"> {{varReferencia.value}}
+  <h2>{{"cadena".split('').reverse().join('')}}</h2>
+  <h2>{{false ? 'SI' : 'NO'}}</h2>
   
-  <h2>{{persona}}</h2>
+  <img src="{{logo}}">
+  
+  <h3>2 + 2 es igual a {{2 + 2}}</h3>
+  
+  <h2 [hidden]="oculto">Ejemplo Enlazado de propiedades</h2>
+  <input [hidden]="oculto" value="Este es un input oculto">
+  
+  <h2 [hidden]="oculto === true">Ejemplo Enlazado de propiedades</h2>
+  <input [hidden]="oculto === true" value="Este es un input oculto">
+  
+  <button (click)="cambiarNombre()">Voltear nombre</button>
   
 </div>

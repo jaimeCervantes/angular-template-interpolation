@@ -6,26 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  gente: Array<any>;
-  persona: Object = 'Soy otra persona';
-
-  constructor() {
-    this.gente = [{
-      nombre: 'Jaime',
-      edad: 30,
-    },
-    {
-      nombre: 'Guadalupe',
-      edad: 25
-    },
-    {
-      nombre: 'Jacobo',
-      edad: 35
-    },
-    {
-      nombre: 'Ruben',
-      edad: 31
-    }
-    ]
+  nombre:string;
+  logo: string;
+  oculto: boolean = true;
+  constructor () {
+    this.nombre = 'Jaime Cervantes Velasco';
+    this.logo = 'https://angular.io/assets/images/logos/angular/angular.png';
+  }
+  
+  cambiarNombre (name) {
+    this.nombre = this.nombre.split('').reverse().join('');;
   }
 }
